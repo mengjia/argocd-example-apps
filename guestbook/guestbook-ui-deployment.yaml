@@ -18,3 +18,8 @@ spec:
         name: guestbook-ui
         ports:
         - containerPort: 80
+      tolerations:
+      - key: network
+        operator: "Equal"
+        value: "innerOnly"
+        effect: "NoSchedule"        
